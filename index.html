@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דודי | פרויקט בניית אתרים - ג'ון ברייס</title>
+<meta name="description" content="דף הגשה לפרויקט בניית אתרים, קורס שיווק דיגיטלי ג'ון ברייס: דף נחיתה, אתר תדמית, חנות אונליין ופורטפוליו. דודי, נובמבר 2026.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Secular+One&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e1013;--bg2:#161a20;--line:#2a3039;--text:#f2efe8;--mute:#a7adb8;--acc:#c8ff3d;--acc2:#ff6b4a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Secular One','Heebo',sans-serif;font-weight:400;line-height:1.15}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--acc);background:var(--acc);color:#10130a;cursor:pointer;font-family:inherit;font-size:1rem;transition:transform .22s,background .22s,box-shadow .22s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px #c8ff3d22}
+.btn.out{background:transparent;color:var(--acc)}
+.btn.out:hover{background:var(--acc);color:#10130a}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc2);outline-offset:5px}
+header{position:sticky;top:0;z-index:50;background:rgba(14,16,19,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Secular One';font-size:1.5rem;text-decoration:none}
+.logo b{color:var(--acc);font-weight:400}
+.nav ul{display:flex;gap:28px;list-style:none;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--mute);position:relative;transition:color .2s}
+.nav ul a::after{content:"";position:absolute;bottom:-8px;right:0;width:100%;height:2px;background:var(--acc);transform:scaleX(0);transform-origin:right;transition:transform .25s}
+.nav ul a:hover{color:var(--acc)}
+.nav ul a:hover::after,.nav ul a.active::after{transform:scaleX(1)}
+.nav .btn{padding:8px 20px}
+/* hero */
+.hero{padding:84px 0 70px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(200,255,61,.16),transparent 65%);top:-160px;left:-120px;pointer-events:none;animation:glow-drift 14s ease-in-out infinite alternate}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--acc);font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero p{font-size:1.2rem;color:var(--mute);max-width:580px;margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.collage{display:grid;grid-template-columns:1fr 1fr;gap:14px;transform:rotate(2deg)}
+.collage .mini{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px rgba(0,0,0,.45);background:#0a0c0f}
+.collage .mini img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.collage .mini:hover img{transform:scale(1.05)}
+.collage .mini:nth-child(2){transform:translateY(14px)}
+.collage .mini:nth-child(3){transform:translateY(-8px)}
+/* stats */
+.stats{border-block:1px solid var(--line);background:var(--bg2)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px}
+.stats b{display:block;font-family:'Secular One';font-size:2.2rem;color:var(--acc);line-height:1.1}
+.stats span{color:var(--mute);font-size:.95rem}
+/* sections */
+section{padding:90px 0}
+.head{margin-bottom:46px;max-width:640px}
+.head h2{font-size:clamp(2rem,4.4vw,3.2rem);margin-bottom:12px}
+.head p{color:var(--mute);font-size:1.1rem}
+.lab{color:var(--acc);font-weight:700;margin-bottom:10px;display:block}
+/* projects */
+.proj{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;padding:44px 0;border-top:1px solid var(--line)}
+.proj:nth-child(even){grid-template-columns:.85fr 1.15fr}
+.proj:nth-child(even) .shot{order:2}
+.shot{display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#0a0c0f;box-shadow:0 20px 50px rgba(0,0,0,.45);transition:transform .25s}
+.shot:hover{transform:translateY(-6px)}
+.shot .bar{height:30px;background:#1d222a;display:flex;align-items:center;gap:6px;padding:0 14px}
+.shot .bar i{width:10px;height:10px;border-radius:50%;background:#444}
+.shot .bar i:nth-child(1){background:#ff5f57}.shot .bar i:nth-child(2){background:#febc2e}.shot .bar i:nth-child(3){background:#28c840}
+.shot img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+@media(hover:hover){.shot:hover img{transform:scale(1.035)}}
+.proj .num{font-family:'Secular One';color:var(--acc);font-size:1rem}
+.proj h3{font-size:clamp(1.7rem,3.2vw,2.4rem);margin:4px 0 4px}
+.proj .type{color:var(--acc2);font-weight:700;margin-bottom:12px}
+.proj p{color:var(--mute);margin-bottom:14px}
+.proj ul{list-style:none;display:grid;gap:7px;margin-bottom:18px}
+.proj li{padding-right:24px;position:relative}
+.proj li::before{content:"";position:absolute;right:0;top:calc(.7em - 2px);width:6px;height:6px;border-radius:50%;background:var(--acc)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chips span{border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:5px 14px;font-size:.93rem;transition:border-color .2s,background .2s}
+@media(hover:hover){.chips span:hover{border-color:var(--acc);background:#c8ff3d0a}}
+.proj .links{display:flex;flex-wrap:wrap;gap:12px}
+.proj .btn{padding:10px 22px;font-size:.95rem}
+/* grader access */
+.grader-sec{background:var(--bg2);border-block:1px solid var(--line)}
+.gcard{max-width:760px;margin:0 auto;border:1px solid #c8ff3d55;border-radius:26px;background:var(--bg);padding:38px 36px;box-shadow:0 24px 70px #0006;position:relative;overflow:hidden}
+.gcard::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(200,255,61,.1),transparent 65%);top:-140px;left:-110px;pointer-events:none}
+.gcard .lock{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:16px;background:var(--acc);color:#10130a;font-size:1.6rem;margin-bottom:16px}
+.gcard h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:10px}
+.gcard>p{color:var(--mute);margin-bottom:24px;max-width:560px}
+.creds{display:grid;gap:12px;margin-bottom:22px}
+.cred{display:grid;grid-template-columns:130px 1fr;gap:14px;align-items:center;border:1px solid var(--line);background:var(--bg2);border-radius:14px;padding:14px 18px}
+.cred .k{color:var(--mute);font-size:.93rem;font-weight:700}
+.cred .v{font-family:ui-monospace,'Courier New',monospace;font-size:1.05rem;color:var(--acc);direction:ltr;text-align:left;word-break:break-all}
+.cred a.v{text-decoration:none}
+.cred a.v:hover{text-decoration:underline}
+.gnote{font-size:.88rem;color:var(--mute);border-top:1px dashed var(--line);padding-top:16px}
+/* footer */
+footer{padding:34px 0;border-top:1px solid var(--line);color:var(--mute);font-size:.93rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--acc)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:8px 11px;font:inherit;cursor:pointer}
+section[id]{scroll-margin-top:12px}
+/* motion */
+.hero .wrap>div:first-child>*{animation:hero-in .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .eyebrow{animation-delay:.08s!important}.hero h1{animation-delay:.18s!important}
+.hero p{animation-delay:.28s!important}.hero .cta{animation-delay:.38s!important}
+.collage{animation:portrait-in 1s cubic-bezier(.2,.7,.2,1) both}
+.reveal{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--delay,0ms)}
+.reveal.pending{opacity:0;transform:translateY(26px)}
+@keyframes hero-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes portrait-in{from{opacity:0;transform:translateY(25px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes glow-drift{to{transform:translate(30px,35px)}}
+@media(max-width:900px){
+.nav{gap:12px}.nav .logo{margin-left:auto}.nav>.btn{padding:8px 16px;font-size:.9rem}
+.menu-toggle{display:block}
+.nav ul{display:none;position:absolute;top:64px;right:0;left:0;padding:18px 22px 24px;background:#101318;border-bottom:1px solid var(--line);gap:0;box-shadow:0 18px 30px #0005}
+.nav ul.open{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.nav ul a{display:block;padding:10px 8px}.nav ul a::after{display:none}
+.hero{padding:44px 0 50px}
+.hero .wrap,.proj,.proj:nth-child(even){grid-template-columns:1fr}
+.proj:nth-child(even) .shot{order:0}
+.hero .wrap{gap:40px}
+.collage{max-width:420px;margin:0 auto}
+.stats .wrap{grid-template-columns:1fr 1fr;gap:26px 22px}
+section{padding:60px 0}
+.proj{gap:24px;padding:34px 0}
+}
+@media(max-width:560px){
+body{font-size:16px}
+.wrap{padding-inline:20px}
+.hero{padding:32px 0 42px}.hero .wrap{gap:36px}
+.hero h1{font-size:clamp(2.3rem,10.4vw,3.2rem);line-height:1.13;margin-bottom:18px}
+.hero .eyebrow{font-size:.85rem;margin-bottom:14px;gap:8px}
+.hero p{font-size:1rem;line-height:1.8;margin-bottom:23px}
+.cta{gap:10px}.cta .btn{width:100%;justify-content:center;padding:12px 18px}
+.stats b{font-size:2rem}.stats span{font-size:.85rem;line-height:1.6;display:block;margin-top:7px}
+section{padding:52px 0}.head{margin-bottom:28px}.head h2{font-size:2rem}.head p{font-size:1rem}
+.proj{gap:23px;padding:30px 0}.proj h3{overflow-wrap:anywhere}.proj .btn{min-height:44px}
+.chips{gap:6px}.chips span{font-size:.85rem;padding:5px 11px}
+.shot{border-radius:12px}.shot .bar{height:25px}.shot .bar i{width:8px;height:8px}
+.gcard{padding:26px 20px;border-radius:20px}
+.cred{grid-template-columns:1fr;gap:4px;padding:13px 15px}
+.cred .v{font-size:.98rem}
+.reveal.pending{transform:translateY(18px)}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+.reveal.pending{opacity:1;transform:none}
+}
+</style>
+</head>
+<body id="top">
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">דודי<b>.</b></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="פתיחת תפריט ניווט">תפריט ☰</button>
+    <ul id="site-menu">
+      <li><a href="#projects">הפרויקטים</a></li>
+      <li><a href="#grader">גישה למרצה</a></li>
+      <li><a href="#contact">צור קשר</a></li>
+    </ul>
+    <a class="btn" href="#projects">לצפייה בפרויקטים</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">✦ ג'ון ברייס · פרויקט בניית אתרים · נובמבר 2026</span>
+        <h1>ארבעה אתרים חיים.<br><em>קורס אחד.</em></h1>
+        <p>שמי דודי, וזה דף ההגשה שלי לפרויקט בניית האתרים בקורס השיווק הדיגיטלי. כאן מרוכזים כל ארבעת הפרויקטים שבניתי במסגרת הקורס: דף נחיתה, אתר תדמית, חנות אונליין מלאה על וורדפרס ופורטפוליו אישי. כל האתרים חיים באוויר ואפשר להיכנס אליהם ולהתרשם.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">הפרויקטים</a>
+          <a class="btn out" href="#grader">גישה למרצה - ניהול החנות</a>
+        </div>
+      </div>
+      <div class="collage" aria-hidden="true">
+        <div class="mini"><img src="shot-landing.webp" alt=""></div>
+        <div class="mini"><img src="shot-brand.webp" alt=""></div>
+        <div class="mini"><img src="shot-store.webp" alt=""></div>
+        <div class="mini"><img src="shot-portfolio.webp" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="wrap">
+      <div><b>4</b><span>פרויקטים חיים באוויר</span></div>
+      <div><b>3</b><span>אתרים סטטיים שנבנו עם AI</span></div>
+      <div><b>1</b><span>חנות WooCommerce על וורדפרס</span></div>
+      <div><b>100%</b><span>עברית, RTL, רספונסיבי</span></div>
+    </div>
+  </div>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="head">
+        <span class="lab">הפרויקטים</span>
+        <h2>ארבעה אתרים, ארבעה תפקידים שונים</h2>
+        <p>כל פרויקט נבנה סביב מותג אחד - צ'וקו KIDS, חולצות ילדים עם אופי - כדי להראות מסע שיווקי מלא: מדף נחיתה שמביא לידים, דרך אתר תדמית, ועד חנות שמוכרת.</p>
+      </div>
+
+      <article class="proj">
+        <a class="shot" href="https://digines-il.github.io/chuko-kids/" target="_blank" rel="noopener">
+          <span class="bar"><i></i><i></i><i></i></span>
+          <img src="shot-landing.webp" alt="צילום מסך של דף הנחיתה צ'וקו KIDS" loading="lazy">
+        </a>
+        <div>
+          <span class="num">01</span>
+          <h3>דף נחיתה</h3>
+          <div class="type">צ'וקו KIDS · לידים והמרות</div>
+          <p>דף נחיתה שיווקי לקולקציית החולצות, בנוי להמרה: הצעת הנחה להזמנה ראשונה, טופס ליד, סיפור המותג, גלריית קולקציה, המלצות ושאלות נפוצות - ומשם ישירות לחנות.</p>
+          <ul>
+            <li>טופס ליד לקופון הנחה עם ולידציה</li>
+            <li>מבנה שיווקי מלא: הוק, יתרונות, הוכחה חברתית, FAQ</li>
+            <li>מעבר חלק לחנות המלאה</li>
+          </ul>
+          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+          <div class="links"><a class="btn" href="https://digines-il.github.io/chuko-kids/" target="_blank" rel="noopener">לדף הנחיתה החי</a></div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <a class="shot" href="https://digines-il.github.io/chuku-kids/" target="_blank" rel="noopener">
+          <span class="bar"><i></i><i></i><i></i></span>
+          <img src="shot-brand.webp" alt="צילום מסך של אתר התדמית צ'וקו KIDS" loading="lazy">
+        </a>
+        <div>
+          <span class="num">02</span>
+          <h3>אתר תדמית</h3>
+          <div class="type">צ'וקו KIDS · נוכחות מותגית</div>
+          <p>אתר תדמית מלא למותג בגדי הילדים: עמוד בית עם שפה עיצובית שמחה ומותאמת לילדים, אודות, שירותים, בלוג ויצירת קשר - הבית הקבע של המותג ברשת.</p>
+          <ul>
+            <li>שפה ויזואלית עקבית בין כל העמודים</li>
+            <li>עמודי אודות, שירותים, בלוג וצור קשר</li>
+            <li>ניווט מלא ורספונסיבי לנייד</li>
+          </ul>
+          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+          <div class="links"><a class="btn" href="https://digines-il.github.io/chuku-kids/" target="_blank" rel="noopener">לאתר התדמית החי</a></div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <a class="shot" href="https://woocommerce-700811-6761470.cloudwaysapps.com/" target="_blank" rel="noopener">
+          <span class="bar"><i></i><i></i><i></i></span>
+          <img src="shot-store.webp" alt="צילום מסך של חנות האונליין צ'וקו" loading="lazy">
+        </a>
+        <div>
+          <span class="num">03</span>
+          <h3>חנות אונליין</h3>
+          <div class="type">צ'וקו · WooCommerce על וורדפרס</div>
+          <p>חנות אונליין מלאה על וורדפרס ו-WooCommerce: קטלוג מוצרים עם קטגוריות, עמודי מוצר, סל וקופה עם אפשרות תשלום במזומן בעיבוד, עמוד אודות ותפריט ניווט מלא.</p>
+          <ul>
+            <li>קטגוריות מוצרים: חולצות, קפוצ'ונים, מעילים ועוד</li>
+            <li>זרימת רכישה מלאה: מוצר → סל → צ'ק-אאוט → הזמנה</li>
+            <li>נבנה עם אלמנטור, עיצוב בהתאמה למותג</li>
+          </ul>
+          <div class="chips"><span>WordPress</span><span>WooCommerce</span><span>Elementor</span><span>Cloudways</span></div>
+          <div class="links">
+            <a class="btn" href="https://woocommerce-700811-6761470.cloudwaysapps.com/" target="_blank" rel="noopener">לחנות החיה</a>
+            <a class="btn out" href="#grader">גישה לניהול החנות</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <a class="shot" href="https://digines-il.github.io/portfolio/" target="_blank" rel="noopener">
+          <span class="bar"><i></i><i></i><i></i></span>
+          <img src="shot-portfolio.webp" alt="צילום מסך של אתר הפורטפוליו של דודי" loading="lazy">
+        </a>
+        <div>
+          <span class="num">04</span>
+          <h3>פורטפוליו</h3>
+          <div class="type">דודי · אתר אישי לבונה אתרים</div>
+          <p>אתר פורטפוליו אישי בסגנון עריכתי כהה עם ניגוד ליים: חמישה פרויקטים חיים, אודות, תהליך עבודה וטופס יצירת קשר עם ולידציה שפותח שיחת וואטסאפ.</p>
+          <ul>
+            <li>עיצוב עריכתי כהה, אנימציות כניסה וגלילה</li>
+            <li>טופס קשר עם ולידציה ושליחה לוואטסאפ</li>
+            <li>השפה הוויזואלית שעליה נבנה גם הדף הזה</li>
+          </ul>
+          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+          <div class="links"><a class="btn" href="https://digines-il.github.io/portfolio/" target="_blank" rel="noopener">לפורטפוליו החי</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="grader" class="grader-sec">
+    <div class="wrap">
+      <div class="gcard">
+        <span class="lock" aria-hidden="true">🔒</span>
+        <h2>גישה למרצה - ניהול החנות</h2>
+        <p>לצורך בדיקת החנות גם מצד הניהול, אלו פרטי הגישה לממשק הניהול של וורדפרס. אחרי ההתחברות אפשר לראות את המוצרים, הקטגוריות, ההזמנות וההגדרות.</p>
+        <div class="creds">
+          <div class="cred">
+            <span class="k">כתובת ניהול</span>
+            <a class="v" href="https://woocommerce-700811-6761470.cloudwaysapps.com/wp-admin/" target="_blank" rel="noopener">woocommerce-700811-6761470.cloudwaysapps.com/wp-admin</a>
+          </div>
+          <div class="cred">
+            <span class="k">שם משתמש</span>
+            <span class="v">__WP_USER__</span>
+          </div>
+          <div class="cred">
+            <span class="k">סיסמה</span>
+            <span class="v">__WP_PASS__</span>
+          </div>
+        </div>
+        <p class="gnote">דף זה מכיל פרטי גישה ולכן אינו מאונדקס במנועי חיפוש.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:60px">
+    <div class="wrap">
+      <div class="head">
+        <span class="lab">צור קשר</span>
+        <h2>דודי</h2>
+        <p>סטודנט בקורס השיווק הדיגיטלי של ג'ון ברייס. לשאלות על הפרויקטים אפשר ליצור קשר בטלפון או בוואטסאפ.</p>
+        <div class="cta" style="margin-top:20px">
+          <a class="btn" href="tel:+972525222811">052-522-2811</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>דודי · פרויקט בניית אתרים · ג'ון ברייס · נובמבר 2026</span>
+    <a href="tel:+972525222811">052-522-2811</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.menu-toggle'),menu=document.getElementById('site-menu');
+  function closeMenu(){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false')}
+  toggle.addEventListener('click',function(){var open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open))});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var items=document.querySelectorAll('.stats .wrap>div,.head,.proj,.gcard,.collage .mini');
+  var reveal=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pending');reveal.unobserve(e.target)}})},{threshold:.08});
+  items.forEach(function(el){el.classList.add('reveal');if(el.getBoundingClientRect().top>window.innerHeight){el.classList.add('pending')}reveal.observe(el)});
+  document.querySelectorAll('.stats .wrap>div,.collage .mini').forEach(function(el,i){el.style.setProperty('--delay',(i%4)*75+'ms')});
+  var navLinks=document.querySelectorAll('.nav ul a');
+  var active=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){navLinks.forEach(function(a){a.classList.toggle('active',a.hash==='#'+e.target.id)})}})},{rootMargin:'-20% 0px -60% 0px'});
+  document.querySelectorAll('section[id]').forEach(function(s){active.observe(s)});
+})();
+</script>
+</body>
+</html>
